@@ -1,0 +1,79 @@
+---
+import { ModeToggle } from './ModeToggle'
+---
+
+<nav
+  class="bg-background font-poppins py-6 px-6 md:px-12 lg:px-16 flex justify-between items-center sticky top-0 z-50"
+>
+  <!-- Title Link -->
+  <a href="/" class="text-3xl font-bold">Brad Craig</a>
+
+  <!-- Hamburger button for mobile -->
+  <div class="md:hidden">
+    <button id="hamburger-btn" class="focus:outline-none">
+      <svg
+        class="w-8 h-8 text-primary"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation Links + Dark Mode Toggle -->
+  <div class="hidden md:flex md:space-x-6 items-center">
+    <ul
+      id="nav-links"
+      class="hidden md:flex md:space-x-6 items-center flex-col md:flex-row"
+    >
+      <li class="w-full md:w-auto mb-2 md:mb-0">
+        <a href="/#AboutMe" class="hover:text-primary">About</a>
+      </li>
+      <li class="w-full md:w-auto mb-2 md:mb-0">
+        <a href="/#project" class="hover:text-primary">Projects</a>
+      </li>
+      <li class="w-full md:w-auto mb-2 md:mb-0">
+        <a href="/" class="hover:text-primary">Resume</a>
+      </li>
+    </ul>
+
+    <!-- Dark mode toggle -->
+    <div class="flex items-center justify-center h-full">
+      <ModeToggle client:load />
+    </div>
+  </div>
+
+  <!-- Mobile Nav Links (below hamburger, aligned to the right) -->
+  <ul
+    id="mobile-nav-links"
+    class="absolute hidden right-0 top-full mt-2 w-48 bg-background p-4 space-y-2 shadow-lg md:hidden"
+  >
+    <li><a href="/#AboutMe" class="block hover:text-primary">About</a></li>
+    <li><a href="/#project" class="block hover:text-primary">Projects</a></li>
+    <li><a href="/" class="block hover:text-primary">Resume</a></li>
+    <li>
+      <!-- Dark mode toggle -->
+      <ModeToggle client:load />
+    </li>
+  </ul>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerBtn = document.getElementById('hamburger-btn')
+    const mobileNavLinks = document.getElementById('mobile-nav-links')
+
+    if (hamburgerBtn && mobileNavLinks) {
+      hamburgerBtn.addEventListener('click', function () {
+        mobileNavLinks.classList.toggle('hidden')
+      })
+    }
+  })
+</script>
