@@ -1,0 +1,29 @@
+---
+const { id } = Astro.props
+---
+
+<section id={id} class="bg-background">
+  <div class="container mx-auto mt-16 flex flex-col">
+    <!-- New wrapper to align h2 and h3 to the left within the padded container -->
+    <div class="mx-auto max-w-3xl px-6 md:px-16 flex flex-col items-start">
+      <h2 class="nav-logo text-3xl mb-8 md:text-3xl">About Me</h2>
+      <!-- Profile picture and text remain centered -->
+      <p>
+        I'm a budding full-stack software developer with a strong foundation in
+        coding and a commitment to continuous learning. I recently graduated
+        from Dev Academy Aotearoa's intensive bootcamp.
+      </p>
+      <p class="mt-4">
+        With over 10 years of international experience as a professional
+        musician, I bring a unique blend of creativity, communication, and
+        collaboration to the tech industry. My background in music has honed my
+        problem-solving skills, creativity, and ability to work effectively in
+        teams.
+      </p>
+      <p class="mt-4">
+        I'm eager to contribute my fresh perspective and dedication to a dynamic
+        development team.
+      </p>
+    </div>
+  </div>
+</section>
