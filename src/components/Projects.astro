@@ -1,0 +1,52 @@
+---
+const { id } = Astro.props
+---
+
+<section id={id} class="bg-background">
+  <!-- Container for the entire section -->
+  <div class="container mx-auto px-4 md:px-16 my-10">
+    <!-- Heading aligned to the left -->
+    <h2 class="nav-logo text-3xl my-2 text-left">Projects</h2>
+
+    <!-- Grid for the project cards -->
+    <div class="flex justify-center">
+      <div class="grid md:grid-cols-3 gap-6 w-full">
+        <!-- Project 1: Trip Hive -->
+        <a href="/" class="bg-white shadow-md rounded-lg p-4 text-center">
+          <div class="w-full h-64 overflow-hidden rounded-lg">
+            <img
+              class="w-full h-full object-cover"
+              src="/TripHive/triphive-logo.png"
+              alt="triphive app logo"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Trip Hive</p>
+        </a>
+
+        <!-- Project 2: Code Quest -->
+        <a href="/" class="bg-white shadow-md rounded-lg p-4 text-center">
+          <div class="w-full h-64 overflow-hidden rounded-lg">
+            <img
+              class="w-full h-full object-cover"
+              src="/CodeQuest/code-quest-logo.png"
+              alt="codequest app logo"
+            />
+          </div>
+          <p class="mt-4 font-semibold">Code Quest</p>
+        </a>
+
+        <!-- Project 3: InvoiceTime -->
+        <a href="/" class="bg-white shadow-md rounded-lg p-4 text-center">
+          <div class="w-full h-64 overflow-hidden rounded-lg">
+            <img
+              class="w-full h-full object-cover"
+              src="/InvoiceTime/invoice-time-2.png"
+              alt="invoicetime wireframe screenshot"
+            />
+          </div>
+          <p class="mt-4 font-semibold">InvoiceTime</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
