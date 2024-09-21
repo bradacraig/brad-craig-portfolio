@@ -1,0 +1,32 @@
+---
+const { id } = Astro.props
+---
+
+<section id={id} class="bg-background h-svh">
+  <div class="container mx-auto md:mt-10 flex flex-col">
+    <!-- New wrapper to align h2 and h3 to the left within the padded container -->
+    <div class="mx-auto px-4 md:px-16 flex flex-col items-start">
+      <h1 class="nav-logo text-3xl mb-8 md:text-3xl">Trip Hive</h1>
+      <p>
+        TripHive is a collaborative travel companion app designed to streamline
+        planning and organization for your next adventure. Whether you're
+        traveling with friends, family, or colleagues, TripHive ensures everyone
+        stays informed and connected.
+      </p>
+      <p class="mt-4">
+        The mission of TripHive is to make travel planning more inclusive by
+        centralizing all trip details in one easy-to-access platform. Instead of
+        relying on scattered emails or spreadsheets, TripHive allows everyone to
+        contribute, view, and manage flight information, accommodations, and
+        activities. This creates a transparent and stress-free experience, where
+        travel becomes a collective effort.
+      </p>
+      <p class="mt-4">
+        TripHive was developed in just one week as my final group project for
+        Dev Academy. While initially built as a web application for our team to present, it
+        remains a valuable learning experience as we continue to refine and
+        expand its features.
+      </p>
+    </div>
+  </div>
+</section>
