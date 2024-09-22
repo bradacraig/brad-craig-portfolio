@@ -5,94 +5,98 @@ import CarouselComponent from './CarouselComponent'
 const { id } = Astro.props
 ---
 
-<section id={id} class="bg-background h-svh">
-  <!-- Container for the whole section -->
-  <div class="container mx-auto md:mt-10 flex flex-col lg:flex-row lg:gap-16">
-    <!-- About Section -->
-    <div class="px-4 md:px-16 flex flex-col items-start lg:w-1/2">
+<section id={id} class="bg-background">
+  <div class="container mx-auto md:mt-10 flex flex-col">
+    <!-- Heading Section -->
+    <div class="px-4 md:px-16">
       <h1 class="nav-logo text-3xl mb-8 md:text-3xl">Trip Hive</h1>
-      <p>
-        TripHive is a collaborative travel companion app designed to streamline
-        planning and organization for your next adventure. Whether you're
-        traveling with friends, family, or colleagues, TripHive ensures everyone
-        stays informed and connected.
-      </p>
-      <p class="mt-4">
-        The mission of TripHive is to make travel planning more inclusive by
-        centralizing all trip details in one easy-to-access platform. Instead of
-        relying on scattered emails or spreadsheets, TripHive allows everyone to
-        contribute, view, and manage flight information, accommodations, and
-        activities. This creates a transparent and stress-free experience, where
-        travel becomes a collective effort.
-      </p>
-      <p class="mt-4">
-        TripHive was developed in just one week as my final group project for
-        Dev Academy. While initially built as a web application for our team to
-        present, it remains a valuable learning experience as we continue to
-        refine and expand its features.
-      </p>
     </div>
 
-    <!-- Carousel and Tech Used Section -->
-    <div class="flex flex-col items-start px-4 md:px-16 lg:w-1/2">
-      <!-- Carousel Section -->
-      <CarouselComponent client:load />
-
-      <!-- Tech Used Section -->
-      <div class="my-10">
-        <h2 class="nav-logo text-2xl mb-6">Tech Used:</h2>
-        <ul class="flex flex-wrap gap-6">
-          <!-- List Item with hover effect for text -->
-          <li class="flex flex-col items-center group">
-            <Icon name="js" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >JavaScript</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="ts" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >TypeScript</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="react" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >React</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="sqlite" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >SQLite3</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="knex" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >Knex</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="vitest" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >Vite Test</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="github" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >GitHub Projects</span
-            >
-          </li>
-          <li class="flex flex-col items-center group">
-            <Icon name="bulma" class="text-6xl" />
-            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
-              >Bulma</span
-            >
-          </li>
-        </ul>
+    <!-- About and Carousel Section -->
+    <div class="px-4 md:px-16 flex flex-col lg:flex-row gap-10">
+      <!-- About Section -->
+      <div class="lg:w-1/2">
+        <p>
+          TripHive is a collaborative travel companion app designed to
+          streamline planning and organization for your next adventure. Whether
+          you're traveling with friends, family, or colleagues, TripHive ensures
+          everyone stays informed and connected.
+        </p>
+        <p class="mt-4">
+          The mission of TripHive is to make travel planning more inclusive by
+          centralizing all trip details in one easy-to-access platform. Instead
+          of relying on scattered emails or spreadsheets, TripHive allows
+          everyone to contribute, view, and manage flight information,
+          accommodations, and activities.
+        </p>
+        <p class="mt-4">
+          TripHive was developed in just one week as my final group project for
+          Dev Academy. While initially built as a web application for our team
+          to present, it remains a valuable learning experience as we continue
+          to refine and expand its features.
+        </p>
       </div>
+
+      <!-- Carousel Section -->
+      <div class="lg:w-1/2">
+        <CarouselComponent client:load />
+      </div>
+    </div>
+
+    <!-- Tech Used Section -->
+    <div class="px-4 md:px-16 my-10">
+      <h2 class="nav-logo text-2xl mb-6">Tech Used:</h2>
+      <ul class="flex flex-wrap gap-6 justify-center">
+        <!-- List Items with hover effect for text -->
+        <li class="flex flex-col items-center group">
+          <Icon name="js" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >JavaScript</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="ts" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >TypeScript</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="react" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >React</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="sqlite" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >SQLite3</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="knex" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >Knex</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="vitest" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >Vite Test</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="github" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >GitHub Projects</span
+          >
+        </li>
+        <li class="flex flex-col items-center group">
+          <Icon name="bulma" class="text-6xl" />
+          <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+            >Bulma</span
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </section>

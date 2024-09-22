@@ -8,7 +8,12 @@ import {
 
 export default function CarouselComponent() {
   return (
-    <Carousel className=''>
+    <Carousel
+      opts={{
+        align: 'start',
+        loop: true,
+      }}
+    >
       <CarouselContent>
         <CarouselItem>
           <img
