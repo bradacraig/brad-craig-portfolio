@@ -1,11 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components'
+import CarouselComponent from './CarouselComponent'
+
 const { id } = Astro.props
 ---
 
 <section id={id} class="bg-background h-svh">
-  <div class="container mx-auto md:mt-10 flex flex-col">
-    <div class="mx-auto px-4 md:px-16 flex flex-col items-start">
+  <!-- Container for the whole section -->
+  <div class="container mx-auto md:mt-10 flex flex-col lg:flex-row lg:gap-16">
+    <!-- About Section -->
+    <div class="px-4 md:px-16 flex flex-col items-start lg:w-1/2">
       <h1 class="nav-logo text-3xl mb-8 md:text-3xl">Trip Hive</h1>
       <p>
         TripHive is a collaborative travel companion app designed to streamline
@@ -27,32 +31,65 @@ const { id } = Astro.props
         present, it remains a valuable learning experience as we continue to
         refine and expand its features.
       </p>
+    </div>
+
+    <!-- Carousel and Tech Used Section -->
+    <div class="flex flex-col items-start px-4 md:px-16 lg:w-1/2">
+      <!-- Carousel Section -->
+      <CarouselComponent client:load />
+
+      <!-- Tech Used Section -->
       <div class="my-10">
-        <h2 class="nav-logo text-2xl">Tech Used:</h2>
-        <ul>
-          <li class="flex flex-row">
-            <Icon name="js" class="text-2xl" />Javascript
+        <h2 class="nav-logo text-2xl mb-6">Tech Used:</h2>
+        <ul class="flex flex-wrap gap-6">
+          <!-- List Item with hover effect for text -->
+          <li class="flex flex-col items-center group">
+            <Icon name="js" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >JavaScript</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="ts" class="text-2xl" />Typescript
+          <li class="flex flex-col items-center group">
+            <Icon name="ts" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >TypeScript</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="react" class="text-2xl" />React
+          <li class="flex flex-col items-center group">
+            <Icon name="react" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >React</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="sqlite" class="text-2xl" />SQLite3
+          <li class="flex flex-col items-center group">
+            <Icon name="sqlite" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >SQLite3</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="knex" class="text-2xl" />Knex
+          <li class="flex flex-col items-center group">
+            <Icon name="knex" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >Knex</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="vitest" class="text-2xl" />Vite Test
+          <li class="flex flex-col items-center group">
+            <Icon name="vitest" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >Vite Test</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="bulma" class="text-2xl" />Bulma
+          <li class="flex flex-col items-center group">
+            <Icon name="github" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >GitHub Projects</span
+            >
           </li>
-          <li class="flex flex-row">
-            <Icon name="github" class="text-2xl" />Github Projects
+          <li class="flex flex-col items-center group">
+            <Icon name="bulma" class="text-6xl" />
+            <span class="text-sm mt-2 opacity-0 group-hover:opacity-100"
+              >Bulma</span
+            >
           </li>
         </ul>
       </div>
