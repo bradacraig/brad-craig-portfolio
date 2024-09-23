@@ -1,29 +1,52 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 const { id } = Astro.props
+
+const currentYear = new Date().getFullYear() // Get the current year
 ---
 
 <section id={id} class="bg-background">
-  <div class="container mx-auto md:mt-10 outline-dashed">
+  <div class="container mx-auto md:mt-10 py-10">
     <!-- Heading Section (left-aligned) -->
-    <div class="mx-auto px-4 md:px-16 flex flex-col items-start">
-      <h2 class="nav-logo text-3xl mb-8 md:text-3xl">Contact</h2>
+    <div class="mx-auto px-4 md:px-16">
+      <hr />
+      <!-- <h2 class="nav-logo text-3xl mb-8 md:text-3xl">Contact</h2> -->
     </div>
 
     <!-- Contact Links Section (center-aligned) -->
     <div class="py-10 flex flex-wrap gap-4 items-center justify-center">
-      <a href="mailto:brad.a.craig@gmail.com" class="hover:text-primary"
-        >brad.a.craig@gmail.com</a
-      >
-      <a
-        href="https://github.com/bradacraig"
-        target="_blank"
-        class="hover:text-primary">GitHub</a
-      >
-      <a
-        href="https://www.linkedin.com/in/bradalancraig"
-        target="_blank"
-        class="hover:text-primary">LinkedIn</a
-      >
+      <div class="flex items-center gap-2">
+        <Icon name="mail" class="text-2xl" />
+        <a href="mailto:brad.a.craig@gmail.com" class="hover:text-primary">
+          brad.a.craig@gmail.com
+        </a>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="github" class="text-2xl" />
+        <a
+          href="https://github.com/bradacraig"
+          target="_blank"
+          class="hover:text-primary"
+        >
+          GitHub
+        </a>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon name="linkedin" class="text-2xl" />
+        <a
+          href="https://www.linkedin.com/in/bradalancraig"
+          target="_blank"
+          class="hover:text-primary"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer Section with Current Year -->
+    <div class="flex items-center justify-center">
+      <p>Created by Brad Craig &copy; {currentYear}</p>
     </div>
   </div>
 </section>
