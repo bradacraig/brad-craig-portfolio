@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components'
 import CarouselComponent from './CarouselComponent'
+import { Button } from './ui/button'
 
 const { id } = Astro.props
 ---
@@ -35,6 +36,16 @@ const { id } = Astro.props
           to present, it remains a valuable learning experience as we continue
           to refine and expand its features.
         </p>
+        <Button className="mt-4"
+          ><a href="https://triphive.pushed.nz/" target="_blank">View Site</a
+          ></Button
+        >
+        <Button className="mt-4"
+          ><a
+            href="https://github.com/kahikatea-2024/Flight-Plan"
+            target="_blank">View Github</a
+          ></Button
+        >
       </div>
 
       <!-- Carousel Section -->
