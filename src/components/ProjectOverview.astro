@@ -1,0 +1,60 @@
+---
+import { Icon } from 'astro-icon/components'
+import CarouselComponent from './CarouselComponent'
+import { Button } from './ui/button'
+
+interface ProjectProps {
+  title: string
+  description: string[]
+  siteUrl: string
+  githubUrl: string
+  techUsed: { name: string; icon: string }[]
+}
+
+const { title, description, siteUrl, githubUrl, techUsed } = Astro.props as ProjectProps
+---
+
+<section id={title.toLowerCase().replace(' ', '-')} class="bg-background">
+  <div class="container mx-auto md:mt-10 flex flex-col">
+    <!-- Heading Section -->
+    <div class="px-4 md:px-16">
+      <h1 class="nav-logo text-3xl mb-8 md:text-3xl">{title}</h1>
+    </div>
+
+    <!-- About and Carousel Section -->
+    <div class="px-4 md:px-16 flex flex-col lg:flex-row gap-10">
+      <!-- About Section -->
+      <div class="lg:w-1/2">
+        {description.map((desc) => <p class="mt-4">{desc}</p>)}
+        <Button className="mt-4">
+          <a href={siteUrl} target="_blank">View Site</a>
+        </Button>
+        <Button className="mt-4">
+          <a href={githubUrl} target="_blank">View Github</a>
+        </Button>
+      </div>
+
+      <!-- Carousel Section -->
+      <div class="lg:w-1/2 mt-4">
+        <CarouselComponent client:load />
+      </div>
+    </div>
+
+    <!-- Tech Used Section -->
+    <div class="px-4 md:px-16 my-10">
+      <h2 class="nav-logo text-2xl mb-6">Tech Used:</h2>
+      <ul class="flex flex-wrap gap-6 justify-center">
+        {
+          techUsed.map((tech) => (
+            <li class="flex flex-col items-center group">
+              <Icon name={tech.icon} class="text-6xl" />
+              <span class="text-sm mt-2 opacity-0 group-hover:opacity-100">
+                {tech.name}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

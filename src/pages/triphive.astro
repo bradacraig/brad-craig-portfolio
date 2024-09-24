@@ -3,13 +3,30 @@ import Layout from '../layouts/Layout.astro'
 import '@/styles/globals.css'
 
 import Nav from '@/components/Nav.astro'
-
-import OverviewTripHive from '@/components/OverviewTripHive.astro'
+import ProjectOverview from '@/components/ProjectOverview.astro'
 ---
-
 
 <Layout title="Brad Craig | Projects">
   <main>
-    <OverviewTripHive id={'TripHive'} />
+    <ProjectOverview
+      title="Trip Hive"
+      description={[
+        `TripHive is a collaborative travel companion app designed to streamline planning and organization for your next adventure. Whether you're traveling with friends, family, or colleagues, TripHive ensures everyone stays informed and connected.`,
+        `The mission of TripHive is to make travel planning more inclusive by centralizing all trip details in one easy-to-access platform. Instead of relying on scattered emails or spreadsheets, TripHive allows everyone to contribute, view, and manage flight information, accommodations, and activities.`,
+        `TripHive was developed in just one week as my final group project for Dev Academy. While initially built as a web application for our team to present, it remains a valuable learning experience as we continue to refine and expand its features.`,
+      ]}
+      siteUrl="https://triphive.pushed.nz/"
+      githubUrl="https://github.com/kahikatea-2024/Flight-Plan"
+      techUsed={[
+        { name: 'JavaScript', icon: 'js' },
+        { name: 'TypeScript', icon: 'ts' },
+        { name: 'React', icon: 'react' },
+        { name: 'SQLite3', icon: 'sqlite' },
+        { name: 'Knex', icon: 'knex' },
+        { name: 'Vitest', icon: 'vitest' },
+        { name: 'GitHub Projects', icon: 'github' },
+        { name: 'Bulma', icon: 'bulma' },
+      ]}
+    />
   </main>
 </Layout>
