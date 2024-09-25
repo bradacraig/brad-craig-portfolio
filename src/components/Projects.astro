@@ -9,10 +9,13 @@ const { id } = Astro.props
     <h2 class="nav-logo text-3xl my-2 text-left">Projects</h2>
 
     <!-- Grid for the project cards -->
-    <div class="flex justify-center">
+    <div class="py-10 flex justify-center">
       <div class="grid md:grid-cols-3 gap-6 w-full">
         <!-- Project 1: Trip Hive -->
-        <a href="/triphive" class="bg-white shadow-md rounded-lg p-4 text-center">
+        <a
+          href="/triphive"
+          class="bg-primary shadow-md rounded-lg p-4 text-center"
+        >
           <div class="w-full h-64 overflow-hidden rounded-lg">
             <img
               class="w-full object-cover"
@@ -20,11 +23,11 @@ const { id } = Astro.props
               alt="triphive app logo"
             />
           </div>
-          <p class="mt-4 font-semibold">Trip Hive</p>
+          <p class="mt-4 font-semibold text-black text-xl">Trip Hive</p>
         </a>
 
         <!-- Project 2: Code Quest -->
-        <a href="/" class="bg-white shadow-md rounded-lg p-4 text-center">
+        <a href="/" class="bg-primary shadow-md rounded-lg p-4 text-center">
           <div class="w-full h-64 overflow-hidden rounded-lg">
             <img
               class="w-full object-cover"
@@ -32,19 +35,19 @@ const { id } = Astro.props
               alt="codequest app logo"
             />
           </div>
-          <p class="mt-4 font-semibold">Code Quest</p>
+          <p class="mt-4 font-semibold text-black text-xl">Code Quest</p>
         </a>
 
         <!-- Project 3: InvoiceTime -->
-        <a href="/" class="bg-white shadow-md rounded-lg p-4 text-center">
+        <a href="/" class="bg-primary shadow-md rounded-lg p-4 text-center">
           <div class="w-full h-64 overflow-hidden rounded-lg">
             <img
-              class="w-full h-full object-cover"
+              class="w-full object-cover"
               src="/InvoiceTime/invoice-time-2.png"
               alt="invoicetime wireframe screenshot"
             />
           </div>
-          <p class="mt-4 font-semibold">InvoiceTime</p>
+          <p class="mt-4 font-semibold text-black text-xl">InvoiceTime</p>
         </a>
       </div>
     </div>
