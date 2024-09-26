@@ -1,21 +1,17 @@
 ---
-interface Props {
-  title: string
-  body: string
+interface ProjectCardProps {
   href: string
+  imgSrc: string
+  imgAlt: string
+  title: string
 }
 
-const { href, title, body } = Astro.props
+const { href, imgSrc, imgAlt, title } = Astro.props as ProjectCardProps
 ---
 
-<li class="link-card">
-  <a href={href}>
-    <h2>
-      {title}
-      <!-- <span>&rarr;</span> -->
-    </h2>
-    <p>
-      {body}
-    </p>
-  </a>
-</li>
+<a href={href} class="bg-primary shadow-md rounded-lg p-4 text-center">
+  <div class="w-full h-64 overflow-hidden rounded-lg">
+    <img class="w-full object-cover" src={imgSrc} alt={imgAlt} />
+  </div>
+  <p class="mt-4 font-semibold text-black text-xl">{title}</p>
+</a>

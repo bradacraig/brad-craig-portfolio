@@ -1,4 +1,5 @@
 ---
+import ProjectCard from './ProjectCard.astro'
 const { id } = Astro.props
 ---
 
@@ -11,44 +12,29 @@ const { id } = Astro.props
     <!-- Grid for the project cards -->
     <div class="py-10 flex justify-center">
       <div class="grid md:grid-cols-3 gap-6 w-full">
-        <!-- Project 1: Trip Hive -->
-        <a
+        <!-- Trip Hive -->
+        <ProjectCard
           href="/triphive"
-          class="bg-primary shadow-md rounded-lg p-4 text-center"
-        >
-          <div class="w-full h-64 overflow-hidden rounded-lg">
-            <img
-              class="w-full object-cover"
-              src="/TripHive/triphive-mock.png"
-              alt="triphive app logo"
-            />
-          </div>
-          <p class="mt-4 font-semibold text-black text-xl">Trip Hive</p>
-        </a>
+          imgSrc="/TripHive/triphive-mock.png"
+          imgAlt="triphive app logo"
+          title="Trip Hive"
+        />
 
-        <!-- Project 2: Code Quest -->
-        <a href="/" class="bg-primary shadow-md rounded-lg p-4 text-center">
-          <div class="w-full h-64 overflow-hidden rounded-lg">
-            <img
-              class="w-full object-cover"
-              src="/CodeQuest/codequest-mock.webp"
-              alt="codequest app logo"
-            />
-          </div>
-          <p class="mt-4 font-semibold text-black text-xl">Code Quest</p>
-        </a>
+        <!-- Code Quest -->
+        <ProjectCard
+          href="/"
+          imgSrc="/CodeQuest/codequest-mock.webp"
+          imgAlt="codequest app logo"
+          title="Code Quest"
+        />
 
-        <!-- Project 3: InvoiceTime -->
-        <a href="/" class="bg-primary shadow-md rounded-lg p-4 text-center">
-          <div class="w-full h-64 overflow-hidden rounded-lg">
-            <img
-              class="w-full object-cover"
-              src="/InvoiceTime/invoice-time-2.png"
-              alt="invoicetime wireframe screenshot"
-            />
-          </div>
-          <p class="mt-4 font-semibold text-black text-xl">InvoiceTime</p>
-        </a>
+        <!-- InvoiceTime -->
+        <ProjectCard
+          href="/"
+          imgSrc="/InvoiceTime/invoice-time-2.png"
+          imgAlt="invoicetime wireframe screenshot"
+          title="InvoiceTime"
+        />
       </div>
     </div>
   </div>
