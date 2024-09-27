@@ -1,4 +1,5 @@
 ---
+import { Icon } from 'astro-icon/components'
 import ProfilePic from './ProfilePic.astro'
 import { Button } from './ui/button'
 const { id } = Astro.props
@@ -6,7 +7,7 @@ const { id } = Astro.props
 
 <section id={id} class="bg-background">
   <div
-    class="container mx-auto px-16 my-8 md:my-32 flex flex-col md:flex-row justify-between items-center "
+    class="container mx-auto px-16 my-8 md:my-32 flex flex-col md:flex-row justify-between items-center"
   >
     <!-- Text section -->
     <div class="mx-8 md:mx-0 flex flex-col items-start">
@@ -15,14 +16,62 @@ const { id } = Astro.props
         <h2 class="nav-logo text-3xl lg:text-4xl text-blue-500">
           Web Developer
         </h2>
-        <Button className="my-8">Let's connect</Button>
+        <Button className="my-8" id="connect-btn">Let's connect</Button>
+        <!-- Contact links -->
+        <div class="hidden" id="contact-links">
+          <ul>
+            <li>
+              <span class="flex items-center">
+                <Icon name="mail" class="text-2xl mr-2" />
+                <a
+                  href="mailto:brad.a.craig@gmail.com"
+                  target="_blank"
+                  class="hover:text-primary"
+                >
+                  Email
+                </a>
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center">
+                <Icon name="github" class="text-2xl mr-2" />
+                <a
+                  href="https://github.com/bradacraig"
+                  target="_blank"
+                  class="hover:text-primary"
+                >
+                  GitHub
+                </a>
+              </span>
+            </li>
+            <li>
+              <span class="flex items-center">
+                <Icon name="linkedin" class="text-2xl mr-2" />
+                <a
+                  href="https://www.linkedin.com/in/bradalancraig"
+                  target="_blank"
+                  class="hover:text-primary"
+                >
+                  LinkedIn
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- Profile picture -->
-    <div
-      class="flex justify-center items-center  md:w-3/5 lg:w-2/5"
-    >
+    <div class="flex justify-center items-center md:w-3/5 lg:w-2/5">
       <ProfilePic />
     </div>
   </div>
 </section>
+
+<script>
+  document
+    .getElementById('connect-btn')
+    ?.addEventListener('click', function () {
+      const contactLinks = document.getElementById('contact-links')
+      contactLinks?.classList.toggle('hidden')
+    })
+</script>
