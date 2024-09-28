@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '@/styles/globals.css'
+import ProjectOverview from '@/components/ProjectOverview.astro'
+---
+
+<Layout title="Brad Craig | Projects">
+  <main>
+    <ProjectOverview
+      title="Code Quest"
+      description={[
+        `CodeQuest is a simple interactive multichoice quiz to help fledgling developers brush up on JavaScript concepts. The idea was to create something that Dev Academy foundations students could use as a study aid before making the transition into bootcamp.`,
+        `This was built during a friday group project at Dev Academy. These projects have a time limit of one day so have a bit of a hack-a-thon feel to them. I worked as part of a team of 5 students and took on the role of product owner, as well as writing some of the front end code.`,
+      ]}
+      siteUrl=""
+      githubUrl="https://github.com/bradacraig/CodeQuest"
+      techUsed={[
+        { name: 'JavaScript', icon: 'js' },
+        { name: 'TypeScript', icon: 'ts' },
+        { name: 'React', icon: 'react' },
+        { name: 'SQLite3', icon: 'sqlite' },
+        { name: 'Knex', icon: 'knex' },
+        { name: 'Vitest', icon: 'vitest' },
+        { name: 'Tailwind', icon: 'tailwind' },
+        { name: 'Express', icon: 'express' },
+      ]}
+    />
+  </main>
+</Layout>

@@ -6,7 +6,14 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 
-export default function CarouselComponent() {
+interface CarouselProps {
+  images: { src: string; alt: string }[]
+}
+
+export default function CarouselComponent({ images }: CarouselProps) {
+    if (!images || images.length === 0) {
+      return <p>No images available.</p>
+    }
   return (
     <Carousel
       opts={{
@@ -15,36 +22,11 @@ export default function CarouselComponent() {
       }}
     >
       <CarouselContent>
-        <CarouselItem>
-          <img
-            src="TripHive/Screenshots/triphive.pushed.nz_my-trips.png"
-            alt="my trips page"
-          />
-        </CarouselItem>
-        <CarouselItem>
-          <img
-            src="TripHive/Screenshots/triphive.pushed.nz_schedule.png"
-            alt="schedule page"
-          />
-        </CarouselItem>
-        <CarouselItem>
-          <img
-            src="TripHive/Screenshots/triphive.pushed.nz_events.png"
-            alt="events page"
-          />
-        </CarouselItem>
-        <CarouselItem>
-          <img
-            src="TripHive/Screenshots/triphive.pushed.nz_profile.png"
-            alt="profile page"
-          />
-        </CarouselItem>
-        <CarouselItem>
-          <img
-            src="TripHive/Screenshots/triphive.pushed.nz_friends.png"
-            alt="friends page"
-          />
-        </CarouselItem>
+        {images.map((image, index) => (
+          <CarouselItem key={index}>
+            <img src={image.src} alt={image.alt} />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

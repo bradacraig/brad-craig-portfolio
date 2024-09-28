@@ -9,9 +9,11 @@ interface ProjectProps {
   siteUrl: string
   githubUrl: string
   techUsed: { name: string; icon: string }[]
+  images: { src: string; alt: string }[]
 }
 
-const { title, description, siteUrl, githubUrl, techUsed } = Astro.props as ProjectProps
+const { title, description, siteUrl, githubUrl, techUsed, images = [] } =
+  Astro.props as ProjectProps
 ---
 
 <section id={title.toLowerCase().replace(' ', '-')} class="bg-background">
@@ -26,9 +28,15 @@ const { title, description, siteUrl, githubUrl, techUsed } = Astro.props as Proj
       <!-- About Section -->
       <div class="lg:w-1/2">
         {description.map((desc) => <p class="mt-4">{desc}</p>)}
-        <Button className="mt-4">
-          <a href={siteUrl} target="_blank">View Site</a>
-        </Button>
+        {
+          siteUrl && (
+            <Button className="mt-4">
+              <a href={siteUrl} target="_blank">
+                View Site
+              </a>
+            </Button>
+          )
+        }
         <Button className="mt-4">
           <a href={githubUrl} target="_blank">View Github</a>
         </Button>
@@ -36,7 +44,7 @@ const { title, description, siteUrl, githubUrl, techUsed } = Astro.props as Proj
 
       <!-- Carousel Section -->
       <div class="lg:w-1/2 mt-4">
-        <CarouselComponent client:load />
+        <CarouselComponent images={images} client:load />
       </div>
     </div>
 
