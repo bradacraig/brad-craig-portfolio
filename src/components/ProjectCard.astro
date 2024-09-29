@@ -9,9 +9,9 @@ interface ProjectCardProps {
 const { href, imgSrc, imgAlt, title } = Astro.props as ProjectCardProps
 ---
 
-<a href={href} class="bg-primary shadow-md rounded-lg p-4 text-center">
+<a href={href} class="bg-secondary shadow-md rounded-lg p-4 text-center">
   <div class="w-full h-64 overflow-hidden rounded-lg">
     <img class="w-full object-cover" src={imgSrc} alt={imgAlt} />
   </div>
-  <p class="mt-4 font-semibold text-black text-xl">{title}</p>
+  <p class="mt-4 font-semibold text-foreground text-xl">{title}</p>
 </a>
