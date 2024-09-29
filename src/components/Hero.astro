@@ -9,14 +9,25 @@ const { id } = Astro.props
   <div
     class="container mx-auto px-16 my-8 md:my-32 flex flex-col md:flex-row justify-between items-center"
   >
-    <!-- Text section -->
-    <div class="mx-8 md:mx-0 flex flex-col items-start">
-      <h1 class="nav-logo lg:text-6xl text-5xl my-4">Brad Craig</h1>
+    <!-- Text section with fade-in animation -->
+    <div class="mx-8 md:mx-0 flex flex-col items-start animate-fadeIn">
+      <h1
+        class="nav-logo lg:text-6xl text-5xl my-4 opacity-0 transition-opacity duration-1000"
+      >
+        Brad Craig
+      </h1>
       <div class="ml-1">
-        <h2 class="nav-logo text-3xl lg:text-4xl text-blue-500">
+        <h2
+          class="nav-logo text-3xl lg:text-4xl text-blue-500 opacity-0 transition-opacity duration-1000 delay-200"
+        >
           Web Developer
         </h2>
-        <Button className="my-8" id="connect-btn">Let's connect</Button>
+        <Button
+          className="my-8 opacity-0 transition-opacity duration-1000 delay-700"
+          id="connect-btn"
+        >
+          Let's connect
+        </Button>
         <!-- Contact links -->
         <div class="hidden" id="contact-links">
           <ul class="flex space-x-4 mb-4">
@@ -61,7 +72,9 @@ const { id } = Astro.props
       </div>
     </div>
     <!-- Profile picture -->
-    <div class="flex justify-center items-center md:w-3/5 lg:w-2/5">
+    <div
+      class="flex justify-center items-center md:w-3/5 lg:w-2/5 opacity-0 transition-opacity duration-1000 delay-500"
+    >
       <ProfilePic />
     </div>
   </div>
@@ -74,4 +87,10 @@ const { id } = Astro.props
       const contactLinks = document.getElementById('contact-links')
       contactLinks?.classList.toggle('hidden')
     })
+
+  window.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.opacity-0').forEach(function (element) {
+      element.classList.remove('opacity-0')
+    })
+  })
 </script>
