@@ -59,3 +59,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* globals.css */
+
+.tech-item {
+  padding: 0.75rem; /* or use @apply for padding */
+  background-color: transparent;
+  border: 0.25px solid ; /* using your CSS variable */
+  border-radius: var(--radius); /* using your theme's radius */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-item:hover {
+  background-color: var(--accent); /* Optional hover effect */
+}
+
+.tech-icon {
+  font-size: 1.875rem; /* or use @apply text-3xl */
+}
+
+.tech-label {
+  font-size: 1.125rem; /* or use @apply text-lg */
+}
+
