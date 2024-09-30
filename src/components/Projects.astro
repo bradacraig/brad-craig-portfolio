@@ -7,11 +7,11 @@ const { id } = Astro.props
   <!-- Container for the entire section -->
   <div class="container mx-auto px-4 md:px-16 my-10">
     <!-- Heading aligned to the left -->
-    <h2 class="nav-logo text-3xl my-2 text-left">Projects</h2>
+    <h2 class="nav-logo text-3xl my-2 text-left animate-on-scroll">Projects</h2>
 
     <!-- Grid for the project cards -->
     <div class="py-10 flex justify-center">
-      <div class="grid md:grid-cols-3 gap-6 w-full">
+      <div class="grid md:grid-cols-3 gap-6 w-full ">
         <!-- Trip Hive -->
         <ProjectCard
           href="/triphive"
@@ -39,3 +39,17 @@ const { id } = Astro.props
     </div>
   </div>
 </section>
+
+<script>
+  const elements = document.querySelectorAll('.animate-on-scroll')
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view')
+      }
+    })
+  })
+
+  elements.forEach((el) => observer.observe(el))
+</script>
