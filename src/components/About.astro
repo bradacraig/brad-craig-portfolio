@@ -5,8 +5,10 @@ const { id } = Astro.props
 <section id={id} class="bg-background">
   <div class="container mx-auto md:mt-10 flex flex-col">
     <div class="mx-auto px-4 md:px-16 flex flex-col items-start">
-      <h2 class="nav-logo text-3xl mb-8 md:text-3xl">About Me</h2>
-      <p>
+      <h2 class="nav-logo text-3xl mb-8 md:text-3xl animate-on-scroll">
+        About Me
+      </h2>
+      <p class="animate-on-scroll">
         Combining a passion for coding with a background in music, I bring a
         fresh and creative approach to full-stack development. After completing
         Dev Academy Aotearoa's intensive 17-week bootcamp, I’ve gained a solid
@@ -15,15 +17,15 @@ const { id } = Astro.props
         hands-on coding, including the use of Git, modern web frameworks,
         relational databases, test-driven development, and unit testing.
       </p>
-      <p class="mt-4">
+      <p class="mt-4 animate-on-scroll">
         Beyond the world of tech, I’ve spent over a decade as a professional
-        musician. I currently create and perform with Flamingo Pier
-        and The Raw Honey’s. My background in music has shaped me in ways that
-        complement my journey as a developer. The creativity, collaboration, and
+        musician. I currently create and perform with Flamingo Pier and The Raw
+        Honey’s. My background in music has shaped me in ways that complement my
+        journey as a developer. The creativity, collaboration, and
         problem-solving required in both industries have made me adaptable and
         driven in every project I take on.
       </p>
-      <p class="mt-4">
+      <p class="mt-4 animate-on-scroll">
         I’m excited to bring this unique perspective to a dynamic development
         team, blending technical expertise with the collaborative mindset and
         creative flair I’ve developed throughout my musical career.
@@ -32,4 +34,16 @@ const { id } = Astro.props
   </div>
 </section>
 
+<script>
+  const elements = document.querySelectorAll('.animate-on-scroll')
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view')
+      }
+    })
+  })
+
+  elements.forEach((el) => observer.observe(el))
+</script>

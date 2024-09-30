@@ -37,7 +37,9 @@ const techStack = [
 
 <div class="container mx-auto py-10">
   <div class="mx-auto px-4 md:px-16 flex flex-col items-start">
-    <h2 class="nav-logo text-3xl mb-8 md:text-3xl">Tech Stack</h2>
+    <h2 class="nav-logo text-3xl mb-8 md:text-3xl animate-on-scroll">
+      Tech Stack
+    </h2>
   </div>
 
   <!-- Wrap the entire section with a text-size class -->
@@ -194,3 +196,17 @@ const techStack = [
     </div>
   </div>
 </div>
+
+<script>
+  const techItems = document.querySelectorAll('.tech-item')
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view')
+      }
+    })
+  })
+
+  techItems.forEach((item) => observer.observe(item))
+</script>
