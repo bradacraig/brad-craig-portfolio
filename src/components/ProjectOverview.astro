@@ -8,6 +8,7 @@ interface ProjectProps {
   description: string[]
   siteUrl: string
   githubUrl: string
+  prototypeUrl?: string
   techUsed: { name: string; icon: string }[]
   images: { src: string; alt: string }[]
 }
@@ -17,6 +18,7 @@ const {
   description,
   siteUrl,
   githubUrl,
+  prototypeUrl,
   techUsed,
   images = [],
 } = Astro.props as ProjectProps
@@ -49,9 +51,24 @@ const {
             </Button>
           )
         }
-        <Button className="mt-4">
-          <a href={githubUrl} target="_blank">View Github</a>
-        </Button>
+        {
+          githubUrl && (
+            <Button className="mt-4">
+              <a href={githubUrl} target="_blank">
+                View GitHub
+              </a>
+            </Button>
+          )
+        }
+        {
+          prototypeUrl && (
+            <Button className="mt-4">
+              <a href={prototypeUrl} target="_blank">
+                View Prototype
+              </a>
+            </Button>
+          )
+        }
       </div>
 
       <!-- Carousel Section -->

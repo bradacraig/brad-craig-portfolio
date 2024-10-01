@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '@/styles/globals.css'
+import ProjectOverview from '@/components/ProjectOverview.astro'
+---
+
+<Layout title="Brad Craig | Projects">
+  <main>
+    <ProjectOverview
+      title="Invoice Time"
+      description={[
+        `InvoiceTime is a simple timesheeting and invoicing app designed as a solution to stop using notes and excel spreadsheets when logging hours and creating invoices. During my work as a landscaping contractor I'd searched for a product that could do this but most offered more than I needed and were expensive. The main focus of this app was to provide a simple UI/UX that could get the job done all in one app from loging the hours to sending the invoice.`,
+        `This app is still in the design and planning phase, but you can check out a working prototype here `,
+      ]}
+      siteUrl=""
+      githubUrl=""
+      prototypeUrl="https://www.figma.com/proto/BkkZ6ZKohMNBgG7ngJFmSK/InvoiceTime?node-id=0-1&t=sSiEchTWIfO6zEbD-1"
+      techUsed={[
+        { name: 'Figma', icon: 'figma' },
+      ]}
+      images={[
+        {
+          src: 'InvoiceTime/invoice-time-2.png',
+          alt: 'Invoice Time 1',
+        },
+        {
+          src: 'InvoiceTime/invoice-time-2.png',
+          alt: 'Invoice Time 2',
+        },
+      ]}
+    />
+  </main>
+</Layout>
