@@ -13,7 +13,7 @@ const { href, imgSrc, imgAlt, title } = Astro.props as ProjectCardProps
   href={href}
   class="bg-background shadow-md border rounded-lg p-4 text-center animate-on-scroll"
 >
-  <div class="w-full h-64 overflow-hidden rounded-lg">
+  <div class="w-full overflow-hidden rounded-lg">
     <img class="w-full object-cover" src={imgSrc} alt={imgAlt} />
   </div>
   <p class="mt-4 font-semibold text-foreground text-xl">{title}</p>
