@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '@/styles/globals.css'
+import ProjectOverview from '@/components/ProjectOverview.astro'
+---
+
+<Layout title="Brad Craig | Projects">
+  <main>
+    <ProjectOverview
+      title="Grouse Landscapes"
+      description={[
+        `Grouse Landscapes is a clean, modern business card-style website crafted in Webflow, showcasing the artistry of garden design and maintenance. This site refresh highlights the client’s work with a visually immersive gallery featuring more of their beautifully maintained gardens, bringing their portfolio to life. Each page includes strategic calls-to-action (CTAs) guiding visitors toward the contact form, making it easy for potential clients to reach out. Throughout the project, I collaborated closely with the client, contributing to the design, photography, and copy to capture the essence of their brand. The site is now in its final review stage and is set to go live soon.`,
+        `Check out the design here `,
+      ]}
+      siteUrl=""
+      githubUrl=""
+      prototypeUrl="https://clone-b795b1.webflow.io/"
+      techUsed={[{ name: 'Webflow', icon: 'webflow' }]}
+      images={[
+        {
+          src: '/GrouseLandscapes/grouse-1.webp',
+          alt: 'grouse site screenshot',
+        },
+        {
+          src: '/GrouseLandscapes/grouse-3.webp',
+          alt: 'grouse site screenshot 2',
+        },
+        {
+          src: '/GrouseLandscapes/grouse-2.webp',
+          alt: 'grouse site screenshot 3',
+        },
+      ]}
+    />
+  </main>
+</Layout>
