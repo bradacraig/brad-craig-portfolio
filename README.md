@@ -1,46 +1,11 @@
 # Brad Craig | Portfolio Site
 
-This site is my portfolio site to display links to my projects and explain a little about myself as a web developer.
+bradcraig.dev is my personal portfolio site, designed and built using Astro to showcase a diverse range of projects and designs crafted with various modern tools and technologies. Utilizing Astro's static site generation for fast, efficient performance, the site integrates shadcn components and Tailwind CSS for a visually appealing, responsive layout. Hosted on Cloudflare, the site features an easy-to-navigate interface with links to my key projects, GitHub, and downloadable CV. This portfolio reflects my commitment to clean, accessible design and modern web practices, emphasizing both my technical skills and creative approach to development.
 
 ## Frameworks, Libraries and Themes:
 
 This site is built using Astro with some components and theming from shadcn/ui, and styled with tailwind css.
 
 
-## 🚀 Project Structure
 
-Inside of this Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
