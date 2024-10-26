@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '@/styles/globals.css'
+import ProjectOverview from '@/components/ProjectOverview.astro'
+---
+
+<Layout title="Brad Craig | Projects">
+  <main>
+    <ProjectOverview
+      title="Brad Craig Portfolio"
+      description={[
+        `bradcraig.dev is my personal portfolio site, designed and built using Astro to showcase a diverse range of projects and designs crafted with various modern tools and technologies. Utilizing Astro's static site generation for fast, efficient performance, the site integrates shadcn components and Tailwind CSS for a visually appealing, responsive layout. Hosted on Cloudflare, the site features an easy-to-navigate interface with links to my key projects, GitHub, and downloadable CV. This portfolio reflects my commitment to clean, accessible design and modern web practices, emphasizing both my technical skills and creative approach to development.`,
+        `You are currently visiting the deployed site, click below to vist the source code via my github `,
+      ]}
+      siteUrl="https://bradcraig.dev/"
+      githubUrl="https://github.com/bradacraig/brad-craig-portfolio"
+      prototypeUrl=""
+      techUsed={[
+        { name: 'Astro', icon: 'astro' },
+        { name: 'Typescript', icon: 'typescript' },
+        { name: 'Tailwind', icon: 'tailwind' },
+      ]}
+      images={[
+        {
+          src: '/BradCraig/bradcraig.dev-lap.webp',
+          alt: 'brad craig home page screenshot',
+        },
+        {
+          src: '/BradCraig/bradcraig.dev-projects.webp',
+          alt: 'brad craig projects page screenshot',
+        },
+        {
+          src: '/BradCraig/bradcraig.dev-about.webp',
+          alt: 'brad craig about page screenshot',
+        },
+        {
+          src: '/BradCraig/bradcraig.dev-grouselandscapes.webp',
+          alt: 'brad craig grouse page screenshot',
+        },
+      ]}
+    />
+  </main>
+</Layout>
