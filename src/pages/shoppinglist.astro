@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro'
+import '@/styles/globals.css'
+import ProjectOverview from '@/components/ProjectOverview.astro'
+---
+
+<Layout title="Shopping List | Projects">
+  <main>
+    <ProjectOverview
+      title="Shopping List"
+      description={[
+        `This app is a simple, quality of life tool that my partner and I use almost every day! It is a basic shopping list tool built with React, TypeScript, Tailwind CSS, and Firebase (Authentication + Firestore). Users can sign in, add and edit items, check them off as they shop, and clear the entire list with one click. Items are grouped by grocery store departments for a smoother shopping experience. The app focuses on clean UI, responsive design, and real-time updates, offering a near-SPA experience for efficient list management.`,
+      ]}
+      siteUrl="https://bradcraig.dev/"
+      githubUrl="https://github.com/bradacraig/brad-craig-portfolio"
+      prototypeUrl=""
+      techUsed={[
+        { name: 'Astro', icon: 'astro' },
+        { name: 'Typescript', icon: 'ts' },
+        { name: 'Tailwind', icon: 'tailwind' },
+      ]}
+      images={[
+        {
+          src: '/BradCraig/bradcraig.dev-lap.webp',
+          alt: 'brad craig home page screenshot',
+        },
+        {
+          src: '/BradCraig/bradcraig.dev-projects.webp',
+          alt: 'brad craig projects page screenshot',
+        },
+        {
+          src: '/BradCraig/bradcraig.dev-about.webp',
+          alt: 'brad craig about page screenshot',
+        },
+        {
+          src: '/BradCraig/bradcraig.dev-grouselandscapes.webp',
+          alt: 'brad craig grouse page screenshot',
+        },
+      ]}
+    />
+  </main>
+</Layout>
